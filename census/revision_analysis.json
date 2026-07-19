@@ -1,0 +1,225 @@
+{
+  "item1_2_census_cluster_aware": {
+    "n_gold": 200,
+    "n_gold_cells": 134,
+    "n_gold_datasets": 56,
+    "real_disagreement": {
+      "point_[lo,hi]_pair": [
+        0.4495,
+        0.3923,
+        0.5068
+      ],
+      "cell_cluster_[lo,hi]": [
+        0.4495,
+        0.3628,
+        0.4985
+      ],
+      "dataset_cluster_[lo,hi]": [
+        0.4495,
+        0.3323,
+        0.5059
+      ]
+    },
+    "within_noise": {
+      "point_[lo,hi]_pair": [
+        0.2482,
+        0.2116,
+        0.2837
+      ],
+      "cell_cluster_[lo,hi]": [
+        0.2482,
+        0.2106,
+        0.2803
+      ],
+      "dataset_cluster_[lo,hi]": [
+        0.2482,
+        0.2103,
+        0.2931
+      ]
+    },
+    "extraction_or_identity_artifact": {
+      "point_[lo,hi]_pair": [
+        0.2703,
+        0.2228,
+        0.3183
+      ],
+      "cell_cluster_[lo,hi]": [
+        0.2703,
+        0.2001,
+        0.3171
+      ],
+      "dataset_cluster_[lo,hi]": [
+        0.2703,
+        0.1908,
+        0.3338
+      ]
+    },
+    "protocol_artifact": {
+      "point_[lo,hi]_pair": [
+        0.3804,
+        0.3244,
+        0.4384
+      ],
+      "cell_cluster_[lo,hi]": [
+        0.3804,
+        0.285,
+        0.4329
+      ],
+      "dataset_cluster_[lo,hi]": [
+        0.3804,
+        0.2689,
+        0.4344
+      ]
+    },
+    "citation_reporting_discrepancy": {
+      "point_[lo,hi]_pair": [
+        0.0056,
+        0.0,
+        0.0168
+      ],
+      "cell_cluster_[lo,hi]": [
+        0.0056,
+        0.0,
+        0.0337
+      ],
+      "dataset_cluster_[lo,hi]": [
+        0.0056,
+        0.0,
+        0.0337
+      ]
+    },
+    "genuine_conflict": {
+      "point_[lo,hi]_pair": [
+        0.0634,
+        0.032,
+        0.0957
+      ],
+      "cell_cluster_[lo,hi]": [
+        0.0634,
+        0.0335,
+        0.1001
+      ],
+      "dataset_cluster_[lo,hi]": [
+        0.0634,
+        0.0333,
+        0.0977
+      ]
+    },
+    "totals": {
+      "real": 0.4495,
+      "within_noise": 0.2482,
+      "extraction_artifact": 0.2703,
+      "sum_three": 0.968,
+      "uncovered_strata_residual": 0.032,
+      "covered_population_mass": 0.968,
+      "within_real_breakdown": {
+        "protocol_artifact": 0.3804,
+        "citation_reporting_discrepancy": 0.0056,
+        "genuine_conflict": 0.0634,
+        "sum": 0.4494
+      }
+    }
+  },
+  "item1_leaderboard_cluster": {
+    "n_leaderboards": 4438,
+    "n_known_direction": 3061,
+    "winner_change_leaderboard_bootstrap": [
+      0.0804,
+      0.0706,
+      0.0902
+    ],
+    "pair_comparable_leaderboard_bootstrap": [
+      0.386,
+      0.3725,
+      0.3993
+    ],
+    "pair_confirmed_incomparable_leaderboard_bootstrap": [
+      0.0152,
+      0.0126,
+      0.0178
+    ],
+    "pair_unknown_leaderboard_bootstrap": [
+      0.5988,
+      0.5849,
+      0.6126
+    ]
+  },
+  "item3_label_quality": {
+    "decision_real_vs_notreal": {
+      "precision": 0.7195,
+      "recall": 0.7662,
+      "f1": 0.7421,
+      "f1_ci95": [
+        0.6571,
+        0.8144
+      ]
+    },
+    "binary_protocol_vs_other_F1": 0.7097,
+    "cause_macroF1_over_6_causes": 0.4385,
+    "top_level_4class_macroF1": 0.4173,
+    "per_cause_[support,P,R,F1]": {
+      "split": {
+        "support": 7,
+        "precision": 0.462,
+        "recall": 0.857,
+        "f1": 0.6
+      },
+      "metric_variant": {
+        "support": 11,
+        "precision": 0.571,
+        "recall": 0.364,
+        "f1": 0.444
+      },
+      "evaluation_setting": {
+        "support": 46,
+        "precision": 0.675,
+        "recall": 0.587,
+        "f1": 0.628
+      },
+      "citation_reporting_discrepancy": {
+        "support": 1,
+        "precision": 0.053,
+        "recall": 1.0,
+        "f1": 0.1
+      },
+      "genuine_conflict": {
+        "support": 12,
+        "precision": 0.333,
+        "recall": 0.333,
+        "f1": 0.333
+      },
+      "extraction_artifact": {
+        "support": 37,
+        "precision": 0.75,
+        "recall": 0.405,
+        "f1": 0.526
+      }
+    },
+    "extraction_artifact_recall": 0.405,
+    "intra_annotator_test_retest_kappa": {
+      "decision": 0.7337,
+      "cause": 0.6756
+    }
+  },
+  "item5_noise_audit": {
+    "n_candidates": 3058,
+    "n_beyond_noise": 1900,
+    "dispersion_source_share_over_beyond_noise": {
+      "reported_sides": 220,
+      "defaulted_sides": 3580,
+      "reported_fraction": 0.0579
+    },
+    "default_dispersion": {
+      "sigma_default_rel_unbounded": 0.021,
+      "sigma_default_bounded_points": 0.71,
+      "k": 2.0
+    },
+    "decision_formula": "beyond_noise iff |v1-v2| > k*sqrt(sigma1^2+sigma2^2); bounded in points (all-defaulted threshold 2.0 pts), unbounded relative (all-defaulted 0.0594), unknown requires both views",
+    "prevalence_vs_threshold_sensitivity_(rel_gap_screen)": {
+      "0.02": 2102,
+      "0.042": 1688,
+      "0.0594": 1511,
+      "0.1": 1226
+    }
+  }
+}

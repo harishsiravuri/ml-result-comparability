@@ -21,12 +21,13 @@ Per-leaderboard fields:
 - `top3_not_confirmed_comparable_to_principal`: fraction of the naive top-3 not confirmed
   comparable to the dominant cluster.
 - `clusters`: list, largest first. Each: {protocol: {split, metric_surface, unit},
-  ranking: [{method, value, paper_id, evidence_quote, source_block}]} ranked by direction.
+  ranking: [{method, value, arxiv_id, arxiv_abs_url, source_location}]} ranked by direction.
 - `comparability_unknown_entries`: entries excluded from clustering (missing a facet), with
   the reason. These are FLAGGED, not forced into a cluster.
 
-Provenance: every entry carries paper_id, the evidence quote, and the source block. The
-curated Papers-with-Code value never enters the cleaning (the cleaning uses the papers' own
-reported values and extracted protocol facets only).
+Provenance: every entry carries a POINTER only (arxiv_id, arxiv_abs_url, and the
+source_location = a section or table label). No excerpt text is redistributed; consult the
+cited arXiv paper directly. The curated Papers-with-Code value never enters the cleaning (the
+cleaning uses the papers' own reported values and extracted protocol facets only).
 
 `divergence_summary.json` — the field-wide naive-versus-cleaned divergence aggregates.

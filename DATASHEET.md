@@ -113,19 +113,32 @@ not a validated label.
 metric_direction}, identity_grade, pair_type, task_family, n_protocols_on_dataset_metric,
 value_gap, rel_gap, unit_scale_reconciled, left{...}, right{...}, noise_decision{beyond_noise,
 range_type, gap, threshold, dispersion_source}, judge_frozen{cause, top_level, rationale,
-rule_label, backbones} | null, auto_derivable_crosscheck`. Gold rows add `author_label,
-author_confidence_1to5, in_test_retest, in_second_annotator`. Each side carries `paper_id,
-value, unit, split, is_own_result, evidence_quote, source_block, quote_verified,
-self_consistency, critic_verdict`.
+rule_label, confidence, backbones} | null, auto_derivable_crosscheck`. LABEL PROVENANCE on
+every row: `human_label` (or null), `model_suggested_label` (or null), `label_source`
+(human | model | null), `model_confidence` (or null), `human_validated` (bool). Gold rows
+add `author_label, author_confidence_1to5, in_test_retest, in_second_annotator`. Each side is a POINTER only:
+`arxiv_id, arxiv_abs_url, arxiv_version (null; not recorded in the snapshot), value, unit,
+split, is_own_result, source_location (a section or table label), quote_verified,
+self_consistency, critic_verdict`. NO evidence-span excerpt text is included.
 
 ## Licensing and intended use
 
-Derived from the CC-BY-SA 4.0 Papers-with-Code archive; this dataset inherits CC-BY-SA
-4.0. The repository code is MIT. Intended use: studying cross-paper quantitative
-comparability and incomparability in a field's literature, and as a benchmark for
-disagreement detection and protocol-cause attribution. NOT intended to adjudicate which
-paper is "correct"; the curated leaderboard value is deliberately excluded from the
-attribution inputs.
+Method (how the rows were produced): result tuples (method, dataset, metric, value) and
+their locations (a section or table label) were extracted from the FULL TEXT of the arXiv
+papers linked in the frozen Papers-with-Code snapshot. The public release does NOT
+redistribute any evidence text: each row carries a POINTER only (arXiv identifier, arXiv
+abstract URL, and the source location) plus the reported value. To read a value in context,
+consult the cited arXiv paper directly.
+
+Licensing: because the release contains no third-party text, the ENTIRE release (this
+dataset and the comparability-cleaned leaderboards) is licensed under CC-BY-SA 4.0 (full
+statement in `LICENSES.md`); the Papers-with-Code-derived facts inherit CC-BY-SA 4.0 from
+the frozen archive. The repository code is MIT licensed.
+
+Intended use: studying cross-paper quantitative comparability and incomparability in a
+field's literature, and as a benchmark for disagreement detection and protocol-cause
+attribution. NOT intended to adjudicate which paper is "correct"; the curated leaderboard
+value is deliberately excluded from the attribution inputs.
 
 ## Comparability-cleaned leaderboards (released resource, Phase 6 addition)
 
