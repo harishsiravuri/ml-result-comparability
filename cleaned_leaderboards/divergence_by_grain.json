@@ -1,0 +1,79 @@
+{
+  "grains": [
+    {
+      "grain": "all_leaderboards (conservative whole-corpus)",
+      "n_leaderboards": 4438,
+      "n_known_direction": 3061,
+      "winner_change_rate": 0.0804,
+      "winner_change_ci95": [
+        0.0713,
+        0.0905
+      ],
+      "mean_pair_comparable": 0.386,
+      "mean_pair_confirmed_incomparable": 0.0152,
+      "mean_pair_unknown": 0.5988,
+      "mean_top3_not_confirmed_comparable": 0.5615,
+      "mean_principal_cluster_coverage": 0.4261
+    },
+    {
+      "grain": "all_pwc (PRIMARY, well-specified)",
+      "n_leaderboards": 32,
+      "n_known_direction": 32,
+      "winner_change_rate": 0.1875,
+      "winner_change_ci95": [
+        0.0889,
+        0.3531
+      ],
+      "mean_pair_comparable": 0.4175,
+      "mean_pair_confirmed_incomparable": 0.0208,
+      "mean_pair_unknown": 0.5616,
+      "mean_top3_not_confirmed_comparable": 0.4375,
+      "mean_principal_cluster_coverage": 0.5315
+    },
+    {
+      "grain": "demonstrably_multiprotocol (>=2 comparable clusters)",
+      "n_leaderboards": 215,
+      "n_known_direction": 190,
+      "winner_change_rate": 0.4632,
+      "winner_change_ci95": [
+        0.3937,
+        0.5341
+      ],
+      "mean_pair_comparable": 0.3498,
+      "mean_pair_confirmed_incomparable": 0.3139,
+      "mean_pair_unknown": 0.3363,
+      "mean_top3_not_confirmed_comparable": 0.4491,
+      "mean_principal_cluster_coverage": 0.5566
+    },
+    {
+      "grain": "partial_pwc",
+      "n_leaderboards": 3092,
+      "n_known_direction": 2413,
+      "winner_change_rate": 0.0887,
+      "winner_change_ci95": [
+        0.078,
+        0.1007
+      ],
+      "mean_pair_comparable": 0.386,
+      "mean_pair_confirmed_incomparable": 0.0196,
+      "mean_pair_unknown": 0.5944,
+      "mean_top3_not_confirmed_comparable": 0.5707,
+      "mean_principal_cluster_coverage": 0.4328
+    },
+    {
+      "grain": "hash_only",
+      "n_leaderboards": 1314,
+      "n_known_direction": 616,
+      "winner_change_rate": 0.0422,
+      "winner_change_ci95": [
+        0.029,
+        0.0611
+      ],
+      "mean_pair_comparable": 0.3851,
+      "mean_pair_confirmed_incomparable": 0.0047,
+      "mean_pair_unknown": 0.6102,
+      "mean_top3_not_confirmed_comparable": 0.5322,
+      "mean_principal_cluster_coverage": 0.4077
+    }
+  ]
+}

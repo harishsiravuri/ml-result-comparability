@@ -1,0 +1,24 @@
+{
+  "frontier_only_per_call_usd": 0.0107,
+  "our_actual_total_pipeline_spend_usd": 18.55,
+  "cross_paper_candidates_surfaced": 3058,
+  "field_leaderboards": 4438,
+  "field_entries": 34247,
+  "field_pairwise_comparisons": 464740,
+  "projected_frontier_only_judge_all_candidates": {
+    "n_calls": 3058,
+    "cost_usd": 32.72,
+    "wall_hours": 0.4
+  },
+  "projected_frontier_only_field_leaderboard_cleaning": {
+    "n_calls": 464740,
+    "cost_usd": 4972.56,
+    "wall_hours": 53.8
+  },
+  "assumptions": {
+    "model": "frontier_only_strongest (Opus 4.8 bare)",
+    "concurrency": 12,
+    "sec_per_call": 5.0
+  },
+  "caveat": "The frontier-only baseline cannot SURFACE the cross-paper candidates or the leaderboard co-membership; the structured layer does. These projections assume the pairs are already surfaced, so they are a lower bound on the cost of a per-pair-only approach."
+}

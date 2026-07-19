@@ -1,0 +1,31 @@
+{
+  "n_input_tuples": 47613,
+  "quarantined_unsupported": 3751,
+  "n_leaderboards_2plus_methods": 4438,
+  "n_with_known_direction": 3061,
+  "n_leaderboards_with_demonstrable_multiprotocol": 215,
+  "mean_principal_cluster_coverage": 0.4261,
+  "DIVERGENCE": {
+    "top1_winner_change_rate": 0.0804,
+    "top1_winner_change_note": "naive best-value winner differs from the dominant-protocol (principal-cluster) winner",
+    "mean_top3_not_confirmed_comparable": 0.5615,
+    "mean_pair_comparable_fraction": 0.386,
+    "mean_pair_CONFIRMED_incomparable_fraction": 0.0152,
+    "mean_pair_unknown_fraction": 0.5988
+  },
+  "by_identity_grade": {
+    "partial_pwc": {
+      "n_leaderboards": 3092,
+      "winner_change_rate": 0.0692
+    },
+    "hash_only": {
+      "n_leaderboards": 1314,
+      "winner_change_rate": 0.0198
+    },
+    "all_pwc": {
+      "n_leaderboards": 32,
+      "winner_change_rate": 0.1875
+    }
+  },
+  "kendall_tau_note": "Within a comparable cluster the cleaned ranking is the value ranking, identical to the naive order restricted to that cluster, so rank correlation among comparable entries is 1.0 by construction. The divergence is STRUCTURAL (invalid cross-protocol comparisons), captured by the contamination metrics above, not by within-cluster reordering."
+}

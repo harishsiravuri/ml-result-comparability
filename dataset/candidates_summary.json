@@ -1,0 +1,54 @@
+{
+  "n_candidate_pairs": 3058,
+  "n_candidate_cells": 902,
+  "split_seed": 13,
+  "dev_fraction": 0.3,
+  "split_unit": "canonical dataset_id",
+  "pairs_by_type": {
+    "own_vs_cited": 516,
+    "cited_vs_cited": 2492,
+    "both_own": 50
+  },
+  "pairs_by_identity_grade": {
+    "partial_pwc": 2392,
+    "hash_only": 57,
+    "all_pwc": 609
+  },
+  "pairs_by_split": {
+    "dev": 689,
+    "test": 2369
+  },
+  "cells_by_split": {
+    "dev": 233,
+    "test": 669
+  },
+  "datasets_by_split": {
+    "dev": 53,
+    "test": 150
+  },
+  "unit_scale_reconciled_pairs": 584,
+  "pairs_with_pwc_comembership": 2135,
+  "top_task_families": {
+    "link prediction": 470,
+    "node classification": 404,
+    "ctr prediction": 264,
+    "semantic segmentation": 199,
+    "multivariate forecasting": 106,
+    "long-term forecasting": 100,
+    "emotion recognition": 96,
+    "video super-resolution": 77,
+    "ctr estimation": 76,
+    "time series forecasting": 76,
+    "knowledge base completion": 75,
+    "object classification": 61,
+    "classification": 57,
+    "unknown": 45,
+    "semi-supervised classification": 43,
+    "long-term time series forecasting": 37,
+    "video question answering": 36,
+    "3d object recognition": 29,
+    "visual dialogue": 28,
+    "semi-supervised node classification": 27
+  },
+  "tuples_sha256": "0717241326b41cbdf12dcab3173e3b1391793e65d665983acdc710917f514e60"
+}

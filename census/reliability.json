@@ -1,0 +1,69 @@
+{
+  "n_gold": 200,
+  "n_retest": 45,
+  "test_retest": {
+    "decision_cohen_kappa": 0.7337,
+    "decision_raw_agreement": 0.867,
+    "cause_cohen_kappa": 0.6756,
+    "cause_raw_agreement": 0.756
+  },
+  "auto_cross_check": {
+    "by_rule": {
+      "split": {
+        "n": 20,
+        "agreement": 0.35
+      },
+      "metric_variant": {
+        "n": 17,
+        "agreement": 0.0
+      }
+    },
+    "overall_n": 37,
+    "overall_agreement": 0.189,
+    "note": "QA only, not a target"
+  },
+  "achieved_stratification": {
+    "cause_proxy": {
+      "neither": 163,
+      "split_differs": 20,
+      "metric_surface_differs": 17
+    },
+    "identity_grade": {
+      "partial_pwc": 155,
+      "hash_only": 4,
+      "all_pwc": 41
+    },
+    "pair_type": {
+      "cited_vs_cited": 158,
+      "own_vs_cited": 35,
+      "both_own": 7
+    },
+    "gap_bin": {
+      "low": 67,
+      "mid": 66,
+      "high": 67
+    },
+    "split_membership": {
+      "test": 158,
+      "dev": 42
+    }
+  },
+  "label_distribution": {
+    "within_noise": 51,
+    "extraction_artifact": 57,
+    "evaluation_setting": 58,
+    "split": 10,
+    "metric_variant": 11,
+    "genuine_conflict": 12,
+    "citation_reporting_discrepancy": 1
+  },
+  "real_disagreement_count": 92,
+  "real_disagreement_share": 0.46,
+  "auto_gate": {
+    "decision_kappa_gate": 0.6,
+    "cause_kappa_gate": 0.45,
+    "decision_pass": true,
+    "cause_pass": true,
+    "PROCEED_TO_PHASE5": true
+  }
+}

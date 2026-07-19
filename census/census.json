@@ -1,0 +1,79 @@
+{
+  "method": "post-stratified gold reweighting (detector-independent, human-validated)",
+  "n_gold": 200,
+  "n_pop_candidates": 3058,
+  "n_strata_pop": 56,
+  "population_prevalence": {
+    "real_disagreement": [
+      0.4495,
+      0.3915,
+      0.511
+    ],
+    "within_noise": [
+      0.2482,
+      0.2112,
+      0.2849
+    ],
+    "extraction_or_identity_artifact": [
+      0.2703,
+      0.2229,
+      0.322
+    ]
+  },
+  "population_taxonomy_shares_among_all_candidates": {
+    "citation_reporting_discrepancy": [
+      0.0056,
+      0.0,
+      0.0168
+    ],
+    "evaluation_setting": [
+      0.2881,
+      0.235,
+      0.345
+    ],
+    "genuine_conflict": [
+      0.0634,
+      0.0324,
+      0.0957
+    ],
+    "metric_variant": [
+      0.0565,
+      0.0304,
+      0.0875
+    ],
+    "split": [
+      0.0358,
+      0.02,
+      0.0527
+    ],
+    "protocol_artifact(any sub-type)": [
+      0.3804,
+      0.3197,
+      0.4417
+    ]
+  },
+  "identity_grade_coverage_raw": {
+    "all_pwc": {
+      "n_gold": 41,
+      "real_share_raw": 0.634,
+      "extraction_share_raw": 0.073
+    },
+    "partial_pwc": {
+      "n_gold": 155,
+      "real_share_raw": 0.413,
+      "extraction_share_raw": 0.348
+    },
+    "hash_only": {
+      "n_gold": 4,
+      "real_share_raw": 0.5,
+      "extraction_share_raw": 0.0
+    }
+  },
+  "leaderboard_audit": {
+    "n_gold_on_multiprotocol_dataset_metric": 85,
+    "n_of_those_real_disagreement": 52,
+    "protocol_artifact_share_of_real": 0.885,
+    "note": "of human-confirmed real disagreements on a dataset+metric hosting >1 PwC leaderboard (protocol), the share attributed to a protocol artifact (i.e. actually incomparable). Coverage = these pairs only."
+  },
+  "caveat": "Validated grain is the inconsistency decision + protocol-vs-other + the split sub-type. metric_variant and the finer 4-class taxonomy are a measured residual (Phase 5 bars). Shares of finer causes are reported but not validated."
+}

@@ -1,0 +1,114 @@
+{
+  "files": [
+    {
+      "path": "DATASHEET.md",
+      "sha256": "177587b5c1360ca853d121c13220fb5c95a15f56baf3c902f2090feadfbd26ce",
+      "bytes": 11579
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "075d53d8dfcd5cb6e8b8f34d645ee42b5c9a8f664957395bdf55153707ab5830",
+      "bytes": 368
+    },
+    {
+      "path": "README.md",
+      "sha256": "0e306c95f442a1e93867cec6b64186e435437272d5ec231ce04d57d11a6898d3",
+      "bytes": 2554
+    },
+    {
+      "path": "census/census.json",
+      "sha256": "1998b104b0d35314b7c69f74a936d8fd911c7b8d19ec0b4de808ace3275e43cd",
+      "bytes": 1934
+    },
+    {
+      "path": "census/reliability.json",
+      "sha256": "5e65b87bed1279d792430b750eab972602e9906dbdcfcda87817f9a66d7d7e3c",
+      "bytes": 1437
+    },
+    {
+      "path": "census/scale_cost.json",
+      "sha256": "7c199229878b83392b446b1ea66101fca29ec106549b6bb43c28123a08829a60",
+      "bytes": 882
+    },
+    {
+      "path": "cleaned_leaderboards/SCHEMA.md",
+      "sha256": "c6fe80be7bf711adb326edcd60cdcca2df804be7d589ed3c861361a5701dade6",
+      "bytes": 2095
+    },
+    {
+      "path": "cleaned_leaderboards/cleaned_leaderboards.jsonl",
+      "sha256": "9ebc0361cc5806cb9320409414f8a63d340f2561840153ef69c9dbb79cf80a8d",
+      "bytes": 8302275
+    },
+    {
+      "path": "cleaned_leaderboards/divergence_by_grain.json",
+      "sha256": "2045e08523814e8958fe641e236f09aa348de7753bda2f3f992247f2cddd227f",
+      "bytes": 2278
+    },
+    {
+      "path": "cleaned_leaderboards/divergence_summary.json",
+      "sha256": "4fc54d63f31089016dd2b72e22815fab3985a92299b1fb945a088fb2fe3e3f9f",
+      "bytes": 1281
+    },
+    {
+      "path": "dataset/candidates.jsonl",
+      "sha256": "9d26d406078ed003d4d8c0698e35152c4450ea9e621f74cea6a9383ac31f4ae0",
+      "bytes": 4897996
+    },
+    {
+      "path": "dataset/candidates_summary.json",
+      "sha256": "624545c7d2b0e5689e98947f854ff7525b6e1a356018df8ebe1a869ee4f10186",
+      "bytes": 1377
+    },
+    {
+      "path": "dataset/gold_labels.csv",
+      "sha256": "58a5b37456ed87dee5c54f84ab6977776d4f045813690f89e29ebf05eb9f8441",
+      "bytes": 14872
+    },
+    {
+      "path": "dataset/gold_sample.jsonl",
+      "sha256": "4c979f579c2008dddb67241e2d1a8a83601e490d8e64077834c23f7372fc0b3f",
+      "bytes": 801174
+    },
+    {
+      "path": "dataset/gold_sample_summary.json",
+      "sha256": "55e1534f302c1b2b6b10454ea41ac979f452ed74905d2a944e5f39eaa10aa802",
+      "bytes": 783
+    },
+    {
+      "path": "dataset/noise_decisions.jsonl",
+      "sha256": "41994f93ccdc5d5ea887aae198dc7b1e43f48a3790f55ef009950ae825413d48",
+      "bytes": 1410529
+    },
+    {
+      "path": "figures/fig1_threeway_pair_breakdown.pdf",
+      "sha256": "09c23549e9d2d0bc2eca032a1b8537dbfc092175557fb9dbcc2db84848ba0c61",
+      "bytes": 14138
+    },
+    {
+      "path": "figures/fig2_winner_change_by_grade.pdf",
+      "sha256": "0946fa803088b253a0934dc7a44384f267c1d05e5cecefcaeef092cbe3ec4b5c",
+      "bytes": 13516
+    },
+    {
+      "path": "figures/fig3_worked_examples_naive_vs_cleaned.pdf",
+      "sha256": "04596d471cfd1cc59436ed61183f8ac28af8d4159f248453feaf62949eca7a8e",
+      "bytes": 24058
+    },
+    {
+      "path": "figures/fig4_census_prevalence.pdf",
+      "sha256": "47b91894b2a8f1122da64fcb3298b47f6d8f2ea1ecd93c0e76b0d85e1c30197b",
+      "bytes": 22259
+    },
+    {
+      "path": "figures/fig5_scale_cost.pdf",
+      "sha256": "7966ba741f33fee26f1ac8fd2272e8c110526c7d8244790efe0439813b34860f",
+      "bytes": 16265
+    },
+    {
+      "path": "load.py",
+      "sha256": "bf0f6237dfc242a89d2d6f73798268881fda0f20d7ec73696fd16473b4bf0713",
+      "bytes": 815
+    }
+  ]
+}
