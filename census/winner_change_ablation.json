@@ -1,0 +1,60 @@
+{
+  "n_leaderboards_known_direction": 3061,
+  "PRIMARY_headline_definition_own_naive": {
+    "naive_definition": "best-value entry over the config's own pre-partition entry set; final = best in the dominant cluster (whole set if no partition). Reproduces the headline 0.0804 for the complete procedure; quarantine and dedup have no partition so cannot change the winner (0.0), attributing the winner change to protocol partitioning.",
+    "winner_change_[point,lo,hi]": {
+      "quarantine_only": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "dedup_only": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "partition_only": [
+        0.0823,
+        0.0732,
+        0.0921
+      ],
+      "complete": [
+        0.0797,
+        0.0702,
+        0.0898
+      ]
+    }
+  },
+  "SUPPLEMENTARY_raw_naive": {
+    "naive_definition": "best-value entry over ALL raw tuples (fixed); measures how often each operation alone shifts the as-published winner.",
+    "winner_change_[point,lo,hi]": {
+      "quarantine_only": [
+        0.0418,
+        0.0346,
+        0.0493
+      ],
+      "dedup_only": [
+        0.0702,
+        0.0614,
+        0.0797
+      ],
+      "partition_only": [
+        0.0823,
+        0.0725,
+        0.0921
+      ],
+      "complete": [
+        0.1176,
+        0.1062,
+        0.1294
+      ]
+    }
+  },
+  "headline_reference": {
+    "complete_from_divergence_by_grain": [
+      0.0804,
+      0.0706,
+      0.0902
+    ]
+  }
+}

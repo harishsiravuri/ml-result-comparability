@@ -1,0 +1,56 @@
+{
+  "n_gold": 200,
+  "unmapped": 0,
+  "dropped_not_real_disagreement": 108,
+  "n_real_disagreement_mapped": 92,
+  "partition_decision_distribution_all_200": {
+    "unknown": 151,
+    "incomparable": 25,
+    "comparable": 24
+  },
+  "confusion_matrix_partition_x_human_(real_only)": {
+    "comparable": {
+      "incomparable": 13,
+      "comparable": 2
+    },
+    "incomparable": {
+      "incomparable": 12
+    },
+    "unknown": {
+      "incomparable": 54,
+      "comparable": 11
+    }
+  },
+  "precision_same_cluster_implies_comparable": {
+    "n": 15,
+    "k": 2,
+    "value": 0.133,
+    "ci95": [
+      0.037,
+      0.379
+    ]
+  },
+  "precision_cross_cluster_implies_incomparable": {
+    "n": 12,
+    "k": 12,
+    "value": 1.0,
+    "ci95": [
+      0.757,
+      1.0
+    ]
+  },
+  "unknown_rate_over_real_mapped": {
+    "n": 92,
+    "k": 65,
+    "value": 0.707,
+    "ci95": [
+      0.607,
+      0.79
+    ]
+  },
+  "unknown_human_disposition": {
+    "incomparable": 54,
+    "comparable": 11
+  },
+  "adjudicable_note": "adjudicable real-disagreement pairs (partition comparable or incomparable) = 27; the rest are comparability-unknown"
+}
