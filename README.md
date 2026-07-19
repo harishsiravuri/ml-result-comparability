@@ -20,7 +20,7 @@ Protocol-Partitioned Leaderboards, and a Census."
 - `dataset/comparekg_gold.jsonl` -- the 200 human-labeled pairs (`human_label`,
   `model_suggested_label`, `label_source`, `human_validated`, confidence, and second-annotator and
   test-retest flags).
-- `cleaned_leaderboards/` -- 16,215 entries across 4,438 leaderboards, partitioned into comparable
+- `cleaned_leaderboards/` -- 16,215 entries across 4,438 leaderboards, partitioned into same-observed-protocol
   clusters, with cross-protocol and comparability-unknown entries flagged rather than silently ranked.
 - `census/`, `figures/`, `DATASHEET.md`, `LICENSES.md`, `MANIFEST.json`, `load.py`.
 

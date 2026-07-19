@@ -147,16 +147,15 @@ with at least two methods, a conservatively cleaned ranking with full per-entry 
 and comparability flags (`SCHEMA.md`, `MANIFEST.json`,
 `checkpoints/cleaned_leaderboards_report.md`).
 
-How "comparable" is defined: two entries are treated as comparable only when their explicit,
+How "comparable" is defined (a same-observed-protocol relation, NOT confirmed comparability; see the paper's partition validation): two entries share an observed protocol only when their explicit,
 extractable protocol facets (normalized split family, raw metric surface, unit) are all known
 and equal. Entries missing any facet are flagged `comparability-unknown` and are NOT grouped
 with others (we prefer flagging over false grouping). Extraction artifacts (critic verdict
-UNSUPPORTED) are quarantined. Within a comparable cluster, entries are ranked by the metric
+UNSUPPORTED) are quarantined. Within a same-observed-protocol cluster, entries are ranked by the metric
 direction; cross-cluster comparisons are marked not directly comparable.
 
 Coverage and finding (descriptive, no model bar). The honest headline is the three-way pair
-split: field-wide, of head-to-head pairs, 0.386 are comparable, only 0.015 are CONFIRMED
-incomparable, and 0.599 are comparability-UNKNOWN (the extracted metadata is too sparse to
+split: field-wide, of head-to-head pairs, 0.386 share the same observed protocol, only 0.015 show a CONFIRMED visible cross-protocol difference, and 0.599 have insufficient protocol information (the extracted metadata is too sparse to
 adjudicate most comparisons). Winner-change by grain (the naive best-value winner differs from
 the dominant-protocol winner; Wilson 95 percent intervals): the PRIMARY all_pwc (well-specified)
 cut 0.188 [0.089, 0.353] (n=32); the 215 demonstrably multi-protocol leaderboards 0.463 [0.394,
@@ -181,7 +180,7 @@ the Phase 5 facet-rule limitations, so the confirmed-incomparable fraction is a 
 lower bound and the all_pwc view is cleanest.
 
 Intended use: a downstream assistant can answer ranking questions from these cleaned
-leaderboards to keep comparisons fair by construction (rank within a comparable cluster,
+leaderboards to keep comparisons fair by construction (rank within a same-observed-protocol cluster,
 surface each cluster's protocol, and flag or refuse cross-cluster and comparability-unknown
 comparisons rather than assert a single winner). Treat the clusters as conservative and
 provenance-grounded, not as ground truth.
