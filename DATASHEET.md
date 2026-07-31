@@ -8,7 +8,7 @@ human-validated subset attributing each disagreement to a cause. The unit is a P
 papers reporting differing values for what a canonicalization matched as the same
 (method, dataset, metric) result cell.
 
-Two files (`data/release/`):
+Two files (`dataset/`):
 - `comparekg_gold.jsonl` (200 rows): the HUMAN-VALIDATED subset. Each row carries full
   provenance, the deterministic noise decision, the frozen-judge prediction (where the
   judge ran), the AUTHOR label, the auto-derivable cross-check, the dev/test split, and
@@ -142,7 +142,7 @@ value is deliberately excluded from the attribution inputs.
 
 ## Comparability-cleaned leaderboards (released resource, Phase 6 addition)
 
-`data/cleaned_leaderboards/` releases, for each canonical (dataset, metric) leaderboard
+`cleaned_leaderboards/` releases, for each canonical (dataset, metric) leaderboard
 with at least two methods, a conservatively cleaned ranking with full per-entry provenance
 and comparability flags (`SCHEMA.md`, `MANIFEST.json`,
 `checkpoints/cleaned_leaderboards_report.md`).

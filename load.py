@@ -13,3 +13,8 @@ if __name__ == "__main__":
     print("candidate pairs:", len(load_dataset()))
     print("human-labeled pairs:", len(load_gold()))
     print("cleaned leaderboard entries:", len(load_cleaned_leaderboards()))
+
+# Convenience aliases: the paper and prose use several names for these products.
+load_disagreements = load_dataset
+load_leaderboards = load_cleaned_leaderboards
+load_protocol_partitioned_leaderboards = load_cleaned_leaderboards

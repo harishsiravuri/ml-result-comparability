@@ -13,7 +13,8 @@ Protocol-Partitioned Leaderboards, and a Census."
   This is a curated sample of the ML-leaderboard literature (1,625 of 576,261 snapshot papers), not
   all of machine learning.
 - 200 pairs (in `comparekg_gold.jsonl`) carry HUMAN labels. Of the 3,058 candidates, 523 carry a
-  MODEL-SUGGESTED cause label (`label_source = model`); the remaining 2,535 have no model-attributed
+  MODEL-SUGGESTED cause label (`label_source = model`); 184 of the 523 overlap the human
+  reference set, so 539 candidates carry at least one label. The remaining 2,519 have no model-attributed
   cause (`model_suggested_label`, `label_source` = null), since no field-wide judge pass was run.
   Model-suggested labels are not gold and should not be treated as such.
 
@@ -62,3 +63,6 @@ errata in the repository issues and released as new tags; the frozen snapshot it
 Please cite the accompanying JCDL 2026 Resources paper and this release. Machine-readable metadata is in `CITATION.cff`. Archival (version) DOI: 10.5281/zenodo.21715276; concept DOI (all versions): 10.5281/zenodo.21715275.
 > Siravuri, H. V. & Alhoori, H. (2026). Cross-Paper Result Comparability: A Dataset, Protocol-Partitioned Leaderboards, and a Census (Version v1.0.0) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.21715276
 
+## Reproduction
+
+The pipeline code is in `src/` and `scripts/`, the model choices and parameters in `config/models.yaml`, and the annotation guides in `docs/`. `scripts/smoke_test.py` loads all three products and checks the expected row counts. The pipeline was run against the authors' working tree; paths in the scripts assume that layout, so the scripts document the exact prompts, model configuration, and logic rather than running unmodified against this packaged structure.

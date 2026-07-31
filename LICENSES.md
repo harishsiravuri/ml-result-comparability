@@ -1,3 +1,8 @@
+## Licensing (data vs. software)
+
+- **Data, annotations, and partitioned leaderboards** (`dataset/`, `cleaned_leaderboards/`, `census/`, figures, datasheet, schemas): CC-BY-SA 4.0, inheriting Papers with Code's CC-BY-SA terms. No third-party paper text is redistributed.
+- **Software** (`load.py`, `src/`, `scripts/`, `config/`): MIT License (see `LICENSE-CODE.txt`).
+
 # License
 
 This resource is released under the Creative Commons Attribution-ShareAlike 4.0 International

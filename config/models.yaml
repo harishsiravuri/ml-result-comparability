@@ -1,0 +1,82 @@
+# Model choices per pipeline stage. Prices are USD per 1M tokens (OpenRouter).
+#
+# BUDGET DISCIPLINE (hard cap $200; see REPORT.md cost model):
+#   - Candidate surfacing (Phase 1) and the noise model (Phase 2) are DETERMINISTIC
+#     and use NO model. They cost ~$0.
+#   - The comparability judge (Phase 3) runs a CHEAP bulk pass field-wide, plus a
+#     frontier-validated subset, on ONE open-weights backbone and ONE frontier
+#     backbone (agreement is reported so the finding is not backbone-specific).
+#   - The frontier-only baseline (Phase 4) uses the STRONGEST available model on the
+#     gold sample plus a larger slice; it is a baseline to beat, never the gold.
+#   - The NLI / contradiction baseline runs LOCALLY (transformers), no API cost.
+#
+# Any change of model for a stage must be recorded in REPORT.md ## Deviations.
+# PRICES MARKED "VERIFY" must be re-checked on OpenRouter immediately before the
+# first real (non-cached) spend in the relevant phase; no spend occurs in Phase 0-2.
+
+# ---------------------------------------------------------------------------
+# Comparability judge (Phase 3). Two backbones for agreement; one cheap bulk model.
+# Models REFRESHED to current stable June-2026 versions per strategic ruling
+# (2026-06-18); prices VERIFIED against the live OpenRouter /models catalog on
+# 2026-06-18 (USD per 1M tokens). NOT Fable 5 (deprecated mid-run previously).
+# Exact versions are pinned here and echoed into each run_config.json.
+# ---------------------------------------------------------------------------
+judge_bulk:                          # field-wide cheap bulk taxonomy pass
+  model_id: deepseek/deepseek-v4-flash
+  price_in_per_m: 0.09               # verified 2026-06-18
+  price_out_per_m: 0.18              # verified 2026-06-18
+  temperature: 0.0
+  max_tokens: 1200
+
+judge_open:                          # STRONG open-weights backbone (distinct lineage -> credible agreement)
+  model_id: deepseek/deepseek-v4-pro
+  price_in_per_m: 0.435              # verified 2026-06-18
+  price_out_per_m: 0.87              # verified 2026-06-18
+  temperature: 0.0
+  max_tokens: 1200
+
+judge_frontier:                      # frontier backbone (cost-balanced; Opus 4.8 if budget comfortable)
+  model_id: anthropic/claude-sonnet-4.6
+  price_in_per_m: 3.00               # verified 2026-06-18
+  price_out_per_m: 15.00             # verified 2026-06-18
+  temperature: 0.0
+  max_tokens: 1200
+
+# ---------------------------------------------------------------------------
+# Baselines (Phase 4). All dev-tuned only; shared inputs where applicable.
+# The frontier-only baseline runs TWO ways (strategic ruling 2026-06-18):
+#   (i)  CONTROLLED: same model as judge_frontier, with vs without the structured
+#        layer (isolates the structured layer, not the text) -> use judge_frontier.
+#   (ii) ADVERSARIAL: the STRONGEST available model, bare (no structured layer).
+# ---------------------------------------------------------------------------
+frontier_only_strongest:             # (ii) adversarial bare, PRIMARY (Anthropic lineage)
+  model_id: anthropic/claude-opus-4.8   # strongest stable Anthropic frontier
+  price_in_per_m: 5.00               # verified 2026-06-18
+  price_out_per_m: 25.00             # verified 2026-06-18
+  temperature: 0.0
+  max_tokens: 1500
+
+frontier_only_strongest_xlineage:    # (ii) adversarial bare, non-Anthropic lineage (breadth)
+  # Strategic ruling: prefer GPT-5.5 if generally available (not preview); else Gemini 3.1
+  # Pro (a preview -> pin the exact snapshot). RE-VERIFY availability + price at Phase 5 run
+  # time and record the exact model id + date in run_config. If neither runs reliably and
+  # affordably, Opus 4.8 alone is acceptable but the single-lineage limitation is stated.
+  model_id: openai/gpt-5.5           # fallback: google/gemini-3.1-pro-preview ($2/$12)
+  price_in_per_m: 5.00               # VERIFY at Phase 5 run time
+  price_out_per_m: 30.00            # VERIFY at Phase 5 run time
+  temperature: 0.0
+  max_tokens: 1500
+
+# (i) controlled frontier-only reuses judge_frontier (anthropic/claude-sonnet-4.6).
+
+nli_baseline:                        # (c) textual NLI / contradiction detector — LOCAL, no API
+  model_id: MoritzLaurer/DeBERTa-v3-large-mnli-fever-anli-ling-wanli  # verified available 2026-06-18 (strongest open NLI)
+  runs_locally: true
+  notes: "Off-the-shelf NLI cross-encoder over paired claim sentences. id2label read dynamically. CPU/MPS ok."
+
+# (a) naive-rule baseline is pure code (same canonical identity, different value -> conflict);
+#     no model entry needed.
+
+defaults:
+  seed: 13
+  top_p: 0.95
