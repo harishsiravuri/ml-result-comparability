@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If you use this resource, please cite the accompanying JCDL 2026 Resources paper and this release."
+title: "Cross-Paper Result Comparability: A Dataset, Protocol-Partitioned Leaderboards, and a Census"
+authors:
+  - family-names: Siravuri
+    given-names: Harish Varma
+    affiliation: Northern Illinois University
+  - family-names: Alhoori
+    given-names: Hamed
+    affiliation: Northern Illinois University
+version: "1.0.0"
+date-released: "2026-07-30"
+license: CC-BY-SA-4.0
+repository-code: "https://github.com/harishsiravuri/ml-result-comparability"
+keywords:
+  - scholarly leaderboards
+  - result comparability
+  - reproducibility
+  - provenance
+  - Papers with Code

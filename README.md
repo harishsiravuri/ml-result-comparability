@@ -1,6 +1,6 @@
 # Cross-Paper Result Comparability in Machine Learning
 
-A provenance-grounded resource for studying whether quantitative results are comparable across
+A provenance-linked resource for studying whether quantitative results are comparable across
 machine-learning papers, built from a frozen Papers with Code (PwC) snapshot dated 2025-07-28.
 Companion to the JCDL 2026 Resources paper "Cross-Paper Result Comparability: A Dataset,
 Protocol-Partitioned Leaderboards, and a Census."
@@ -14,7 +14,7 @@ Protocol-Partitioned Leaderboards, and a Census."
   field marks which. Model-suggested labels are not gold and should not be treated as such.
 
 ## Contents
-- `dataset/comparekg_candidates.jsonl` -- 3,058 cross-paper result-cell disagreements: the canonical
+- `dataset/comparekg_candidates.jsonl` -- 3,058 candidate cross-paper result-cell disagreement pairs (model-suggested labels, not gold): the canonical
   cell, both sides' values and pointers (arXiv id, URL, section or table location), a beyond-noise
   decision, a model-suggested comparability label, an identity grade, and label-provenance fields.
 - `dataset/comparekg_gold.jsonl` -- the 200 human-labeled pairs (`human_label`,
@@ -46,3 +46,14 @@ pairs  = load_dataset()               # 3,058 candidate pairs (model-suggested l
 gold   = load_gold()                  # 200 human-labeled pairs
 boards = load_cleaned_leaderboards()  # 16,215 partitioned entries
 ```
+
+## Maintenance and versioning
+
+This is a frozen, versioned release (see `CITATION.cff` and the `v1.0.0` tag). The underlying data
+is tied to the 2025-07-28 Papers with Code snapshot and does not change. Corrections are tracked as
+errata in the repository issues and released as new tags; the frozen snapshot itself is not modified.
+
+## Citation
+
+Please cite the accompanying JCDL 2026 Resources paper and this release. Machine-readable metadata
+is in `CITATION.cff`.
