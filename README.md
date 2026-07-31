@@ -12,13 +12,15 @@ Protocol-Partitioned Leaderboards, and a Census."
   extracted by our pipeline from the full text of the 1,625 arXiv papers linked in the snapshot.
   This is a curated sample of the ML-leaderboard literature (1,625 of 576,261 snapshot papers), not
   all of machine learning.
-- 200 pairs carry HUMAN labels; the remaining pairs carry MODEL-SUGGESTED labels. The `label_source`
-  field marks which. Model-suggested labels are not gold and should not be treated as such.
+- 200 pairs (in `comparekg_gold.jsonl`) carry HUMAN labels. Of the 3,058 candidates, 523 carry a
+  MODEL-SUGGESTED cause label (`label_source = model`); the remaining 2,535 have no model-attributed
+  cause (`model_suggested_label`, `label_source` = null), since no field-wide judge pass was run.
+  Model-suggested labels are not gold and should not be treated as such.
 
 ## Contents
-- `dataset/comparekg_candidates.jsonl` -- 3,058 candidate cross-paper result-cell disagreement pairs (model-suggested labels, not gold): the canonical
+- `dataset/comparekg_candidates.jsonl` -- 3,058 candidate cross-paper result-cell disagreement pairs: the canonical
   cell, both sides' values and pointers (arXiv id, URL, section or table location), a beyond-noise
-  decision, a model-suggested comparability label, an identity grade, and label-provenance fields.
+  decision, a model-suggested comparability label where present (523 of 3,058; not gold), an identity grade, and label-provenance fields.
 - `dataset/comparekg_gold.jsonl` -- the 200 human-labeled pairs (`human_label`,
   `model_suggested_label`, `label_source`, `human_validated`, confidence, and second-annotator and
   test-retest flags).
@@ -44,7 +46,7 @@ The entire release is under CC-BY-SA 4.0; no third-party paper text is redistrib
 ## Usage
 ```python
 from load import load_dataset, load_gold, load_cleaned_leaderboards
-pairs  = load_dataset()               # 3,058 candidate pairs (model-suggested labels)
+pairs  = load_dataset()               # 3,058 candidate pairs (523 model-suggested)
 gold   = load_gold()                  # 200 human-labeled pairs
 boards = load_cleaned_leaderboards()  # 16,215 partitioned entries
 ```
