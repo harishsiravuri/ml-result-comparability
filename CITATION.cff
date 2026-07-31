@@ -11,6 +11,14 @@ authors:
 version: "1.0.0"
 date-released: "2026-07-30"
 license: CC-BY-SA-4.0
+doi: 10.5281/zenodo.21715276
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.21715275
+    description: "Concept DOI (all versions)"
+  - type: doi
+    value: 10.5281/zenodo.21715276
+    description: "Version DOI (v1.0.0)"
 repository-code: "https://github.com/harishsiravuri/ml-result-comparability"
 keywords:
   - scholarly leaderboards
