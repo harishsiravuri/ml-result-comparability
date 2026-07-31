@@ -1,5 +1,7 @@
 # Cross-Paper Result Comparability in Machine Learning
 
+[![DOI](https://zenodo.org/badge/1305426904.svg)](https://doi.org/10.5281/zenodo.21715275)
+
 A provenance-linked resource for studying whether quantitative results are comparable across
 machine-learning papers, built from a frozen Papers with Code (PwC) snapshot dated 2025-07-28.
 Companion to the JCDL 2026 Resources paper "Cross-Paper Result Comparability: A Dataset,
@@ -55,5 +57,4 @@ errata in the repository issues and released as new tags; the frozen snapshot it
 
 ## Citation
 
-Please cite the accompanying JCDL 2026 Resources paper and this release. Machine-readable metadata
-is in `CITATION.cff`.
+Please cite the accompanying JCDL 2026 Resources paper and this release. Machine-readable metadata is in `CITATION.cff`. Archival DOI: 10.5281/zenodo.21715275.
