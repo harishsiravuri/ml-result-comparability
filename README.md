@@ -58,5 +58,5 @@ errata in the repository issues and released as new tags; the frozen snapshot it
 ## Citation
 
 Please cite the accompanying JCDL 2026 Resources paper and this release. Machine-readable metadata is in `CITATION.cff`. Archival (version) DOI: 10.5281/zenodo.21715276; concept DOI (all versions): 10.5281/zenodo.21715275.
-> Siravuri, H. V. & Alhoori, H. (2026). Cross-Paper Result Comparability: A Dataset, Protocol-Partitioned Leaderboards, and a Census (Version v1.0.0) [Computer software]. Zenodo. https://doi.org/10.5281/zenodo.21715276
+> Siravuri, H. V. & Alhoori, H. (2026). Cross-Paper Result Comparability: A Dataset, Protocol-Partitioned Leaderboards, and a Census (Version v1.0.0) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.21715276
 

@@ -1,5 +1,6 @@
 cff-version: 1.2.0
-message: "If you use this resource, please cite the accompanying JCDL 2026 Resources paper and this release."
+type: dataset
+message: "If you use this resource, please cite this release using the DOI below. A companion paper describing the resource is under review at JCDL 2026."
 title: "Cross-Paper Result Comparability: A Dataset, Protocol-Partitioned Leaderboards, and a Census"
 authors:
   - family-names: Siravuri
