@@ -1,4 +1,9 @@
-"""Smoke test: load all three released products and check expected row counts."""
+"""Smoke test: load all three released products and check expected row counts.
+
+Run from anywhere:  python scripts/smoke_test.py
+"""
+import os, sys
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from load import load_dataset, load_gold, load_cleaned_leaderboards
 
 c = load_dataset(); g = load_gold(); b = load_cleaned_leaderboards()
